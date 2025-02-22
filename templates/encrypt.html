@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="encrypt">
+    <h2>Encrypt Text into Image</h2><br>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="image">Choose Image:</label>
+        <input type="file" name="image" id="image" required>
+
+        <label for="text">Text to Hide:</label>
+        <textarea name="text" id="text" rows="4" required></textarea>
+
+        <label for="encryption">Select Encryption Method:</label>
+        <select name="encryption" id="encryption" required>
+            <option value="AES">AES</option>
+            <option value="RSA">RSA</option>
+            <!-- Add 3DES option if implemented -->
+        </select>
+
+        <button type="submit" class="btn">Hide Text</button>
+    </form>
+
+    {% if output_image %}
+    <div class="output">
+        <h3>Stego Image Generated:</h3>
+        <img src="{{ url_for('static', filename='uploads/' + output_image) }}" alt="Stego Image">
+        <a href="{{ url_for('static', filename='uploads/' + output_image) }}" download class="btn">Download Image</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

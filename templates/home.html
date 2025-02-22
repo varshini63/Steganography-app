@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home">
+    <h1>Welcome to StegoGuard!!!</h1>
+    <h3>Safeguard Your Data with Invisible Security</h3><br>
+    <p>StegoGuard combines two advanced techniques—steganography and digital signatures—to provide a secure way of hiding and verifying information within images. <br><br>
+
+Steganography: This is the process of concealing information within a digital medium like an image, without altering the image’s visible appearance. In StegoGuard, users can embed encrypted text and digital signatures into images. The hidden information cannot be detected through normal viewing, making it ideal for securely transmitting sensitive data. <br><br>
+
+Digital Signatures: A digital signature is used to authenticate the sender of the hidden message and verify that the message hasn't been altered. It provides a cryptographic proof of authenticity, ensuring that the hidden message is both secure and verifiable. <br><br>
+
+By combining these two techniques, StegoGuard offers a powerful tool for sending sensitive information securely, ensuring that only the intended recipient can extract and verify the hidden data while keeping it invisible to others.</p>
+    <div class="buttons">
+        <a href="{{ url_for('encrypt') }}" class="btn">Encrypt</a>
+        <a href="{{ url_for('decrypt') }}" class="btn">Decrypt</a>
+    </div>
+</div>
+{% endblock %}

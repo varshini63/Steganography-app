@@ -1,0 +1,196 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #141E30;;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: #ecf0f1;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #00e676;
+  transform: scale(1.1);
+}
+
+.navbar .logo {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    color: #ecf0f1;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-image {
+    width: 60px; /* Adjust as necessary */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 50px; /* Space between logo and text */
+    border-radius: 50%;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 40px 0;
+    width: 90%;
+    margin: auto;
+}
+
+/* Home Page */
+.home {
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.home p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.home .buttons .btn {
+    margin: 10px;
+}
+
+/* Forms */
+form {
+    
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+form input[type="file"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px; 
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #00e676;
+    color: #203a43;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+}
+
+.btn:hover {
+    background-color: #00c853;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.8);
+  color: #f5f5f5;
+}
+
+/* Output Section */
+.output {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.output img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Flash Messages */
+.flashes {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.flashes li {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #141E30;;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
